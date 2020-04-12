@@ -8,7 +8,7 @@ MySQL master-slave replication with using Docker.
 To run this examples you will need to start containers with "docker-compose" 
 and after starting setup replication. See commands inside ./build.sh. 
 
-#### Create 2 MySQL containers with master-slave row-based replication 
+#### Create 2 shards MySQL containers with master-slave row-based replication 
 
 ```
 ./build.sh
@@ -25,6 +25,8 @@ docker exec mysql_master sh -c "export MYSQL_PWD=111; mysql -u root mydb -e 'cre
 ```
 docker exec mysql_slave sh -c "export MYSQL_PWD=111; mysql -u root mydb -e 'select * from code \G'"
 ```
+
+#### Do something similar with mysql_master2 and mysql_slave2
 
 ## Troubleshooting
 
